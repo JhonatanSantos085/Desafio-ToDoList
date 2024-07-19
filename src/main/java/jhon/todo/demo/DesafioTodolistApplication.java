@@ -1,13 +1,13 @@
-package jhon.todo.desafioTodoList;
+package jhon.todo.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DesafioTodoListApplication {
+public class DesafioTodolistApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DesafioTodoListApplication.class, args);
+		SpringApplication.run(DesafioTodolistApplication.class, args);
 	}
 
 }

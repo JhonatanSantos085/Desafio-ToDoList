@@ -1,10 +1,10 @@
-package jhon.todo.desafioTodoList;
+package jhon.todo.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DesafioTodoListApplicationTests {
+class DesafioTodolistApplicationTests {
 
 	@Test
 	void contextLoads() {
