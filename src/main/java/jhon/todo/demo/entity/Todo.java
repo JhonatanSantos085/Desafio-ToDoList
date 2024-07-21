@@ -14,6 +14,14 @@ public class Todo {
     private String nome;
     private String descricao;
     private boolean realizado;
+    private int prioridade;
+
+    public Todo(String nome, String descricao, boolean realizado, int prioridade) {
+        this.nome =nome;
+        this.descricao = descricao;
+        this.realizado = realizado;
+        this.prioridade = prioridade;
+    }
 
     public long getId() {
         return id;
@@ -55,6 +63,6 @@ public class Todo {
         this.prioridade = prioridade;
     }
 
-    private int prioridade;
+
 
 }
