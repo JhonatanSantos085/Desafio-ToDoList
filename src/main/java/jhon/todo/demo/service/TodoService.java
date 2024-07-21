@@ -3,6 +3,7 @@ package jhon.todo.demo.service;
 import jhon.todo.demo.entity.Todo;
 import jhon.todo.demo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -18,16 +19,19 @@ public class TodoService {
 
     public List<Todo> create(Todo todo){
         todoRepository.save(todo);
-        return null;
+        return list();
 
     }
     public List<Todo> list(){
-        return null;
+        Sort sort = Sort.by("prioridade").descending().and(Sort.by("nome").ascending());
+        return todoRepository.findAll(sort);
     }
-    public List<Todo> update(){
-        return null;
+    public List<Todo> update(Todo todo){
+        todoRepository.save(todo);
+        return list();
     }
-    public List<Todo> delet(){
-        return null;
+    public List<Todo> delete(Long id){
+        todoRepository.deleteById(id);
+        return list();
     }
 }
