@@ -1,6 +1,7 @@
 package jhon.todo.demo.controller;
 
 
+import jakarta.validation.Valid;
 import jhon.todo.demo.entity.Todo;
 import jhon.todo.demo.repository.TodoRepository;
 import jhon.todo.demo.service.TodoService;
@@ -19,7 +20,7 @@ public class TodoController {
     }
 
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo){
+    List<Todo> create(@RequestBody @Valid Todo todo){
         return todoService.create(todo);
     }
 

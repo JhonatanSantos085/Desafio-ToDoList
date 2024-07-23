@@ -1,8 +1,7 @@
 package jhon.todo.demo.entity;
 
-
 import jakarta.persistence.*;
-
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "todos")
@@ -11,18 +10,30 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotBlank
     private String nome;
+
+    @NotBlank
     private String descricao;
+
     private boolean realizado;
+
     private int prioridade;
 
+    // Construtor padrão
+    public Todo() {
+    }
+
+    // Construtor com argumentos
     public Todo(String nome, String descricao, boolean realizado, int prioridade) {
-        this.nome =nome;
+        this.nome = nome;
         this.descricao = descricao;
         this.realizado = realizado;
         this.prioridade = prioridade;
     }
 
+    // Getters e setters
     public long getId() {
         return id;
     }
@@ -62,7 +73,4 @@ public class Todo {
     public void setPrioridade(int prioridade) {
         this.prioridade = prioridade;
     }
-
-
-
 }
